@@ -1,39 +1,39 @@
-В этой задаче необходимо реализовать набор классов для решения геометрических задач на плоскости. Все координаты
-предполагаются целочисленными.
+In this problem, it is necessary to implement a set of classes for solving geometric problems on the plane. All coordinates
+are assumed to be integers.
 
 Vector
-Реализовать класс Vector для вектора на плоскости с необходимыми арифметическими операциями (унарные и бинарные
-+/-, умножение/деление на скаляр, присваивающие версии операций, сравнение на равенство).
+Implement the Vector class for a vector on a plane with the necessary arithmetic operations (unary and binary
++/-, scalar multiplication/division, assigning versions of operations, comparison for equality).
 
 Shape
-Создать набор классов-фигур, которые наследуются от абстрактного базового класса IShape для работы с двумерными
-геометрическими примитивами:
+Create a set of shape classes that inherit from the abstract base class IShape to work with two-dimensional
+geometric primitives:
 
 
-Point (точка);
+Point;
 
-Segment (отрезок);
+Segment;
 
-Line (линия);
+Line;
 
-Ray (луч);
+Ray;
 
-Polygon (простой многоугольник - часть плоскости, ограниченная замкнутой ломаной без самопересечений);
+Polygon (a simple polygon is a part of a plane bounded by a closed polyline without self-intersections);
 
-Circle (окружность).
+Circle.
 
-В базовом классе IShape предусмотреть чисто виртуальные методы:
+In the base class IShape, provide purely virtual methods:
 
-Move(const Vector&) - сдвига на заданный вектор, метод должен изменять состояние объекта и возвращать ссылку на сам
-объект;
+Move(const Vector&) - shift by a given vector, the method must change the state of the object and return a reference to itself
+an object;
 
-ContainsPoint(const Point&) - проверка (true/false) содержит ли фигура (внутренность фигуры) точку;
+ContainsPoint(const Point&) - check (true/false) whether the figure (the inside of the figure) contains a point;
 
-CrossesSegment(const Segment&) проверка (true/false) пересекается ли фигура (граница фигуры) с отрезком;
+CrossesSegment(const Segment&) check (true/false) whether the figure (the border of the figure) intersects with the segment;
 
-Clone() - копирование объекта (необходимо вернуть умный или обычный указатель на копию фигуры);
+Clone() - copying an object (it is necessary to return a smart or regular pointer to a copy of the shape);
 
-ToString() - строковое представление фигуры (формат см. в примерах).
+ToString() - string representation of the figure (see examples for format).
 
-В производных классах - реализовать эти методы. Разность двух точек должна возвращать вектор перемещения одной точки в
-другую.
+In derived classes - implement these methods. The difference of two points must return the displacement vector of one point in
+another.
